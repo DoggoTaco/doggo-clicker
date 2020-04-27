@@ -17,6 +17,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_doggo_clicker</object>
+    <object>objects\obj_connection</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
