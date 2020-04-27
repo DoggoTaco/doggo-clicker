@@ -6,12 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_doggo</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\bg_main1</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_score</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_doggo_clicker</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
