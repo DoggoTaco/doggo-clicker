@@ -10,16 +10,22 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main1</background>
+    <background>background\bg_sec1</background>
+    <background>background\bg_splash</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\fnt_score</font>
   </fonts>
   <objects name="objects">
+    <object>objects\control</object>
     <object>objects\obj_doggo_clicker</object>
     <object>objects\obj_connection</object>
+    <object>objects\obj_fadein_out</object>
+    <object>objects\obj_fadein</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
