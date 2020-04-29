@@ -32,8 +32,8 @@
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_main1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="1" vspeed="1" stretch="0"/>
-    <background visible="-1" foreground="0" name="bg_sec1" x="0" y="-538" htiled="-1" vtiled="-1" hspeed="-3" vspeed="0" stretch="0"/>
-    <background visible="-1" foreground="0" name="bg_sec1" x="154" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="-5" stretch="0"/>
+    <background visible="0" foreground="0" name="bg_sec1" x="0" y="-538" htiled="-1" vtiled="-1" hspeed="-3" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="bg_sec1" x="154" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="-5" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,6 +52,8 @@
   </views>
   <instances>
     <instance objName="obj_fadein" x="0" y="0" name="inst_E4F2C16A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_doggo_clicker" x="544" y="960" name="inst_DD8E6CFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_coin_counter" x="32" y="0" name="inst_BD74FC8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

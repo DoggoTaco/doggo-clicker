@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-9999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,131 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.coins = 0
+            <string>//Vars
+global.coins = 0
 global.save = "save.ini"
+global.conn = "none"
+global.uName = "placeholder"
+global.uID = 0
+global.bgEffect = true
 
+//Vars for checks
+didGetUser = false
+didChangeBGEffect = false
+
+//objs
+instance_create(0, 0, obj_check_connection)
+
+//check settings
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.conn != "none") {
+    if(global.conn = true and didGetUser = false) {
+        didGetUser = true
+        userGet = http_get("http://doggoclicker.doggotaco.ml/database/get-user.php?username=doggo")
+    }
+}
+if(room = room1) {
+    if(global.bgEffect = true and didChangeBGEffect = false) {
+        background_visible[1] = true
+        background_visible[2] = true
+        didChangeBGEffect = true
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="62">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.conn = true) {
+    if(ds_map_find_value(async_load, "id") == userGet) {
+        if(ds_map_find_value(async_load, "status") == 0) {
+            result = ds_map_find_value(async_load, "result");
+            decoded = json_decode(result);
+            if(decoded == -1) {
+                show_message("Error with decoding!")
+                exit;
+            } else {
+                global.uID = decoded[? "default"]
+                global.uID = global.uID[| 0]
+                global.uID = global.uID[? "id"]
+                
+                global.uName = decoded[? "default"]
+                global.uName = global.uName[| 0]
+                global.uName = global.uName[? "username"]
+                
+                global.coins = decoded[? "default"]
+                global.coins = global.coins[| 0]
+                global.coins = global.coins[? "coins"]
+            }
+    
+        } else {
+            result = "null";
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fnt_decode)
+draw_text(64, 64, string(global.uName))
 </string>
           </argument>
         </arguments>

@@ -14,19 +14,26 @@
     <background>background\bg_splash</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\draw_text_outlined.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_score</font>
+    <font>fonts\fnt_decode</font>
   </fonts>
   <objects name="objects">
-    <object>objects\control</object>
+    <objects name="control">
+      <object>objects\control</object>
+      <object>objects\obj_check_connection</object>
+    </objects>
     <object>objects\obj_doggo_clicker</object>
-    <object>objects\obj_connection</object>
     <object>objects\obj_fadein_out</object>
     <object>objects\obj_fadein</object>
+    <object>objects\obj_coin_counter</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
